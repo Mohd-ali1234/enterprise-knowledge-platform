@@ -1,0 +1,32 @@
+Northwind Labs Information Security Policy
+
+1. Device security
+
+All laptops must have full-disk encryption enabled before they are used for
+company work. Screens must lock after five minutes of inactivity. Report a lost
+or stolen device to the IT helpdesk within 24 hours.
+
+2. Credentials
+
+Passwords must be unique per service and stored in the company password
+manager. Multi-factor authentication is mandatory for email, the deployment
+console and the cloud provider. Never share credentials over chat or email.
+
+3. Production access
+
+Production credentials are granted per person and expire after 90 days.
+Tom Okafor leads the Security team and approves all production access requests.
+Access reviews happen quarterly.
+
+4. Incident response
+
+Report a suspected incident immediately to the Security team. The Security team
+triages within one hour during business hours. Tom Okafor is the incident
+commander for any severity one event, and notifies Priya Sharma within 30
+minutes of confirming a breach.
+
+5. Data handling
+
+Customer data may not be copied to personal devices. Analytics extracts must be
+anonymised before they leave the warehouse. The Data team owns the anonymisation
+tooling.

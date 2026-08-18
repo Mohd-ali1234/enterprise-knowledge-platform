@@ -1,0 +1,38 @@
+# ── Web framework ────────────────────────────────────────────────
+fastapi==0.136.1
+uvicorn==0.46.0
+python-multipart==0.0.27      # required for multipart file uploads
+
+# ── Configuration & models ───────────────────────────────────────
+pydantic==2.13.4
+pydantic-settings==2.12.0
+python-dotenv==1.0.1
+
+# ── Document processing ──────────────────────────────────────────
+PyMuPDF>=1.24.0               # PDF text extraction
+python-docx>=1.1.0            # DOCX text extraction
+beautifulsoup4>=4.12.0        # HTML text extraction (Confluence exports)
+                              # Markdown, CSV, TXT and ZIP use the stdlib
+langchain-text-splitters>=1.0.0
+spacy>=3.7.0                  # NER + dependency parsing (knowledge graph)
+                              # model: python -m spacy download en_core_web_sm
+
+# ── Knowledge graph ──────────────────────────────────────────────
+# Local and free: no LLM is involved in graph extraction.
+rapidfuzz>=3.9.0              # conservative entity merging
+networkx>=3.2                 # in-memory graph metrics over a loaded slice
+                              # persistence uses stdlib sqlite3
+
+# ── Embeddings & vector store ────────────────────────────────────
+sentence-transformers>=3.0.0
+chromadb>=1.0.0
+
+# ── Retrieval ────────────────────────────────────────────────────
+rank-bm25>=0.2.2              # sparse/keyword retrieval
+
+# ── LLM clients ──────────────────────────────────────────────────
+httpx==0.28.1                 # Gemini + Ollama HTTP client (no vendor SDK)
+
+# ── Testing ──────────────────────────────────────────────────────
+pytest>=8.0.0
+pytest-asyncio>=0.24.0

@@ -1,0 +1,11 @@
+Name,Role,Team,Location,Start Date,Manager
+Priya Sharma,Chief Technology Officer,Executive,Berlin,2021-02-15,
+Marcus Webb,Engineering Manager,Platform,Berlin,2021-06-01,Priya Sharma
+Aisha Khan,Data Lead,Data,Toronto,2022-01-10,Priya Sharma
+Tom Okafor,Security Lead,Security,London,2022-04-04,Priya Sharma
+Elena Rossi,Finance Director,Finance,Berlin,2020-11-30,
+Daniel Meyer,Senior Engineer,Platform,Berlin,2022-09-12,Marcus Webb
+Sofia Lindqvist,Data Engineer,Data,Toronto,2023-03-20,Aisha Khan
+Omar Haddad,Security Engineer,Security,London,2023-07-03,Tom Okafor
+Grace Chen,Product Designer,Platform,Toronto,2023-08-14,Marcus Webb
+Luis Ortega,Financial Analyst,Finance,Berlin,2024-01-08,Elena Rossi

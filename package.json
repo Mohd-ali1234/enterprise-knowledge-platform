@@ -1,0 +1,19 @@
+{
+  "name": "enterprise-knowledge-intelligence-platform",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Enterprise Knowledge Intelligence Platform - upload, process, index, and retrieve knowledge from your documents",
+  "type": "commonjs",
+  "license": "ISC",
+  "scripts": {
+    "dev": "concurrently -n backend,frontend -c blue,green \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd backend && python -m uvicorn app.main:app --reload --port 8001",
+    "dev:frontend": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "lint": "cd frontend && npm run lint",
+    "test": "cd backend && python -m pytest"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}

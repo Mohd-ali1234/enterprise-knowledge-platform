@@ -1,0 +1,170 @@
+@import "tailwindcss";
+
+/* Theme */
+@theme {
+  --font-sans: "Inter Tight", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Instrument Serif", ui-serif, Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --color-ink-950: #07080b;
+  --color-ink-900: #0b0d12;
+  --color-ink-850: #10131a;
+  --color-ink-800: #161a23;
+  --color-ink-700: #1f2430;
+  --color-ink-600: #2a3040;
+  --color-ink-500: #3a4356;
+  --color-ink-400: #5b6577;
+  --color-ink-300: #8a93a6;
+  --color-ink-200: #b7bdc9;
+  --color-ink-100: #e3e6ec;
+  --color-ink-50: #f5f6f9;
+
+  --color-brand-50: #eef0ff;
+  --color-brand-100: #dde1ff;
+  --color-brand-200: #bcc3ff;
+  --color-brand-300: #94a0ff;
+  --color-brand-400: #6f7dff;
+  --color-brand-500: #4f5bf2;
+  --color-brand-600: #3d46d4;
+  --color-brand-700: #2f37a8;
+  --color-brand-800: #232a82;
+  --color-brand-900: #181d5e;
+
+  --color-success-500: #16a571;
+  --color-success-50: #e7f7ef;
+
+  --color-warn-500: #d18a1c;
+  --color-warn-50: #fdf3e1;
+
+  --color-danger-500: #d44343;
+  --color-danger-50: #fcebeb;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-ink-50);
+  color: var(--color-ink-900);
+  font-family: var(--font-sans);
+  font-feature-settings: "ss01", "cv11";
+  letter-spacing: -0.01em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--color-brand-500);
+  color: #fff;
+}
+
+.focus-ring:focus-visible {
+  outline: 2px solid var(--color-brand-500);
+  outline-offset: 2px;
+  border-radius: 8px;
+}
+
+.bg-grid {
+  background-image:
+    linear-gradient(to right, rgba(15, 18, 26, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 18, 26, 0.05) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.bg-grid-dark {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+@keyframes shimmer {
+  from {
+    background-position: -400px 0;
+  }
+
+  to {
+    background-position: 400px 0;
+  }
+}
+
+.shimmer {
+  background: linear-gradient(90deg, #eef0f4 0%, #f6f7fb 50%, #eef0f4 100%);
+  background-size: 800px 100%;
+  animation: shimmer 1.6s linear infinite;
+}
+
+@keyframes pulseDot {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+
+.pulse-dot::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 9999px;
+  background: currentColor;
+  animation: pulseDot 1.8s ease-out infinite;
+}
+
+.elev-1 {
+  box-shadow:
+    0 1px 0 rgba(15, 18, 26, 0.04),
+    0 1px 2px rgba(15, 18, 26, 0.04);
+}
+
+.elev-2 {
+  box-shadow:
+    0 1px 0 rgba(15, 18, 26, 0.04),
+    0 8px 24px -8px rgba(15, 18, 26, 0.08);
+}
+
+.elev-3 {
+  box-shadow:
+    0 1px 0 rgba(15, 18, 26, 0.04),
+    0 16px 40px -12px rgba(15, 18, 26, 0.12);
+}
+
+.kbd {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  padding: 2px 6px;
+  border-radius: 6px;
+  color: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+/* Chrome, Edge, Safari */
+*::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: none;
+}
+
+/* IE */
+* {
+  -ms-overflow-style: none;
+}
